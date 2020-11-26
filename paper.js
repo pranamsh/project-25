@@ -14,7 +14,7 @@ class paper
         this.r=r;
         this.body=Bodies.circle(x,y,this.r,options);
         World.add(world,this.body);
-        
+        this.image=loadImage("paper.png")
      
         
     }
@@ -23,10 +23,11 @@ class paper
     {
         var paperpos=this.body.position;
         push();
-        fill("pink");
         translate(paperpos.x,paperpos.y);
-        ellipseMode(RADIUS);
-        ellipse(0,0,this.r,this.r);
+        imageMode(RADIUS);
+        image(this.image,0,0,85,85);
+        //ellipseMode(RADIUS);
+       // ellipse(0,0,this.r,this.r);
         pop();
     }
 }

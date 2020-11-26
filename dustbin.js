@@ -9,11 +9,13 @@ class dustbin
         World.add(world,this.dustbinObject);
         this.width=width;
         this.height=height;
+        this.image=loadImage("dustbin.png")
+        
     }
 
     display()
     {
-        fill("white");
+        fill("lightgrey");
         noStroke();
         rectMode(CENTER);
         rect(this.dustbinObject.position.x,this.dustbinObject.position.y,this.width,this.height);
